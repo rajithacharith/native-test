@@ -9,9 +9,7 @@ RUN sh build-native.sh claim_mgt.jar claim_mgt
 
 FROM debian:11-slim
 
-RUN useradd -ms /bin/bash ballerina
 WORKDIR /home/ballerina
-
 
 USER 10014
 
