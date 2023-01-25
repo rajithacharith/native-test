@@ -3,7 +3,7 @@ FROM ballerina/native-builder:latest as build
 
 WORKDIR /app/build
 
-COPY claim_mgt.jar .
+COPY claim_mgt.jar ./
 
 RUN sh build-native.sh claim_mgt.jar claim_mgt
 
@@ -13,7 +13,9 @@ RUN useradd -ms /bin/bash ballerina
 WORKDIR /home/ballerina
 
 
-USER 10001
+USER 10014
+
+EXPOSE 8443
 
 COPY --from=build /app/build/claim_mgt .
 
