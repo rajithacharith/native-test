@@ -13,7 +13,7 @@ RUN useradd -ms /bin/bash ballerina
 WORKDIR /home/ballerina
 
 
-USER ballerina
+USER 10001
 
 COPY --from=build /app/build/claim_mgt .
 
