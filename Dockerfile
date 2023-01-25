@@ -5,7 +5,7 @@ WORKDIR /app/build
 
 COPY claim_mgt.jar ./
 
-RUN sh build-native.sh claim_mgt.jar claim_mgt
+RUN sh build-native.sh ./claim_mgt.jar ./claim_mgt
 
 FROM debian:11-slim
 
